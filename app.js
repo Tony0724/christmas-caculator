@@ -1,4 +1,5 @@
 // 이 코드는 크리스마스까지 얼마나 남았는지 알려주는 코드 입니다.
+const p = document.getElementById("D-day_text")
 const h2 = document.querySelector("h2.D-day")
 const today = new Date()
 const christmas = new Date(today.getFullYear(), 11, 25)
@@ -18,6 +19,7 @@ function diffOFclock() {
     const secondLayout = String(seconddiff).padStart(2, "0")
     if(Daydiff == 0) {
         h2.innerText = `D-day`
+        p.innerText = "메리 크리스마스!!"
     } else {
         h2.innerText = `D-${Daydiff}일 ${hoursLayout}시간:${minuteLayout}분:${secondLayout}초`
     }
